@@ -11,7 +11,7 @@ const Asset = new Schema({
   imageUri: String,
   availability: {
     type: Boolean,
-    default: false
+    default: true
   },
   dateOfAcquisition: String,
   createdAt: {
