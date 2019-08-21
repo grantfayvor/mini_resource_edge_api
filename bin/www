@@ -90,7 +90,7 @@ function onListening() {
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
 
-  mongoose.connect(`mongodb://${config.database.address + ':' + config.database.port}/${config.database.name}`, {
+  mongoose.connect(`mongodb+srv://${config.database.address + ':' + config.database.port}/${config.database.name}`, {
     useNewUrlParser: true
   }, error => {
     if (error) return console.log(error);

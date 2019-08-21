@@ -5,9 +5,9 @@ const config = {
     port: 9000
   },
   database: {
-    name: "resource_edge",
-    address: "127.0.0.1",
-    port: "27017",
+    name: "resourceedge?retryWrites=true",
+    address: "emma",
+    port: "BZKjA95TDFjuW12L@lawyerpp-cluster-5faak.mongodb.net",
     username: "",
     password: ""
   }
