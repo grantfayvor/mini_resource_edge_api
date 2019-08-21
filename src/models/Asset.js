@@ -17,6 +17,13 @@ const Asset = new Schema({
   createdAt: {
     type: Date,
     default: new Date()
+  },
+  owner: {
+    name: {
+      type: String,
+    },
+    email : String,
+    Department : String,
   }
 });
 
