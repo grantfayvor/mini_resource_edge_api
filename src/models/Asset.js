@@ -1,5 +1,5 @@
 const mongoose = require("mongoose"),
-Schema = mongoose.Schema;
+  Schema = mongoose.Schema;
 
 const Asset = new Schema({
   name: {
@@ -13,7 +13,7 @@ const Asset = new Schema({
     type: Boolean,
     default: true
   },
-  dateOfAcquisition: String,
+  dateOfAcquisition: Date,
   createdAt: {
     type: Date,
     default: new Date()
@@ -22,8 +22,8 @@ const Asset = new Schema({
     name: {
       type: String,
     },
-    email : String,
-    Department : String,
+    email: String,
+    Department: String,
   }
 });
 
