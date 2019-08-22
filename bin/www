@@ -8,7 +8,7 @@ var app = require('../app');
 var debug = require('debug')('test-api:server');
 var http = require('http');
 var mongoose = require("mongoose");
-var config = require("../config");
+var config = (require("../config"))[process.env.NODE_ENV || "production"];
 
 /**
  * Get port from environment and store in Express.
@@ -90,7 +90,7 @@ function onListening() {
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
 
-  mongoose.connect(`mongodb+srv://${config.database.address + ':' + config.database.port}/${config.database.name}`, {
+  mongoose.connect(`${config.database.protocol}://${config.database.username + ':' + config.database.password}@${config.database.host + ':' + config.database.port}/${config.database.name}`, {
     useNewUrlParser: true
   }, error => {
     if (error) return console.log(error);
