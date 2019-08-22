@@ -5,7 +5,14 @@ const assetController = {
     return model.create(req.body, (error, result) => {
       return sendResponse(error, result, res);
     });
-  }
+  },
+
+  list : (req,res) => {
+    return model.find((err,data)=>{
+        return sendResponse(err, data, res);
+    })
+  },
+
 }
 
 function sendResponse(error, result, responder) {
